@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createElement item</title>
+    <link href="./output.css" rel="stylesheet">
+
+</head>
+<body id="body">
+    <section id="section1">
+       
+
+    </section> 
+    <ul id="bookItem">
+
+    </ul> 
+    
+<!-- script.............................. -->
+    <script>
+         let section = document.querySelector('#section1');         
+        let headTop = document.createElement("h1");
+        headTop.innerText= 'Book item sports';
+        section.appendChild(headTop); 
+        section.style.fontSize= '30px'
+        section.style.color= 'brown'
+
+    // ul-li item........................................
+        let list = document.querySelector('#bookItem');
+        let listOne = document.createElement('li');
+        listOne.innerText = 'book list 1';              
+        list.appendChild(listOne);
+        listOne.style.fontSize= '25px'
+        listOne.style.color= 'green'
+        
+        let listTwo = document.createElement('li');
+        listTwo.innerText= 'book list 2';
+        list.appendChild(listTwo) 
+        listTwo.style.color= 'blue'
+        listTwo.style.fontSize= '25px'  
+        
+        let listThree = document.createElement("li");
+        listThree.innerText= 'book list 3';
+        list.appendChild(listThree);
+        listThree.style.fontSize= '25px'
+         
+       let body = document.getElementById('body');
+       body.style.border = '1px solid black';
+       body.style.width = '30%';
+       body.style.paddingLeft= '10px'
+       body.style.borderWidth= '10px'
+       body.style.borderRadius='25px'
+
+
+
+    </script>
+</body>
+</html>
