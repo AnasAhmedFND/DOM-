@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switching Headings</title>
+    <style>
+        #output {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" id="dataInput" placeholder="Type something..." />
+    <button id="switchButton">Switch Heading</button>
+
+    <div id="output">
+        <h1 id="heading" style="display: none;">Heading 1</h1>
+        <h2 id="subheading">Heading 2</h2>
+        <div id="dataDisplay"></div>
+    </div>
+
+    <script>
+        let isH1 = false;
+
+        document.getElementById('switchButton').addEventListener('click', () => {
+            const input = document.getElementById('dataInput').value;
+            const dataDisplay = document.getElementById('dataDisplay');
+            
+            // Add input data to the display
+            if (input) {
+                dataDisplay.innerHTML += `<p>${input}</p>`;
+                document.getElementById('dataInput').value = ''; // Clear input
+            }
+
+            // Toggle between headings
+            isH1 = !isH1;
+            document.getElementById('heading').style.display = isH1 ? 'block' : 'none';
+            document.getElementById('subheading').style.display = isH1 ? 'none' : 'block';
+        });
+    </script>
+
+</body>
+</html>

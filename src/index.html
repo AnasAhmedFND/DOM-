@@ -5,61 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
 </head>
-<body>
-    
+<body>    
 
-    <h1>DOM CLASS TWO</h1>
- <div class="div1">
-    <h1 class="book">book list 2</h1>    
-   <ul id="head1">
-        <li class="list-item list2 list3 list4">book item 1</li>
-        <li class="list-item book1 book2 ">book item 2</li>
-        <li class="list-item">book item 3</li>
-       
-   </ul>
- </div>
+<h1 onclick="console.log('heading clicked');">welcome to event</h1>
+<button onclick="console.log(5)">print</button>
+<button onclick="console.log('print hello');">print hello</button>
+<button onclick="document.body.style.backgroundColor = 'blue'">BG Blue</button>
+<!-- <button id="bgbrown">on click</button> -->
+
+<button id="green">new click</button>
 
  
  
- <script>   
+ <script> 
+  // let bgbrown = document.getElementById('bgbrown');
+  // bgbrown.onclick = document.body.style.backgroundColor = 'brown'
 
-    
-    let h1 = document.querySelector(".div1 h1");
-    console.log(h1);    
-    
-    let li = document.querySelectorAll(".list-item");
-    console.log(li);
-    
-    // let getClass = li.getAttribute("class");
-    // console.log(getClass);
-  
-    let list = li.classList;
-    console.log(list);
-    
-    let headOne = document.querySelector('#head1');
-    let newLi = document.createElement("li");
-    newLi.innerText = "book item 4 ";
-    headOne.appendChild(newLi);
-        
-    let newOneLi = document.createElement("li");
-    newOneLi.innerText = "book item 5 ";    
-    headOne.appendChild(newOneLi);
-
-    let six = document.createElement('li');
-    six.innertext = 'book item 6';
-    headOne.appendChild(six);
-
-    let seven = document.createElement('li');
-    seven.innerText = 'book item 7';
-    headOne.appendChild(seven)
-
-    
-
-   // let ulItem =document.querySelector('#ulId');
-   // let newLi = document.createElement('li');
-   // newLi.innerText='book item 4';
-   // ulItem.appendchild(newLi);
-    
+  let green = document.getElementById("green");
+  green.addEventListener('click',function(){
+    document.body.style.backgroundColor = 'green';
+    location.reload
+  })
  </script>
 </body>
 </html>

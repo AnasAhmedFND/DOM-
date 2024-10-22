@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+
+</head>
+<body>
+  <h1 id="total">Amount</h1>
+    <h1 id="heading">old text</h1>
+    <input id="inputText" type="text">
+    <button id="changeBut">click text</button>
+   
+    <button id="resetBtn">Reset</button>
+
+
+
+
+    <script>
+      
+      document.getElementById('changeBut').addEventListener('click', function(){
+        let inputText = document.getElementById('inputText');
+        let inputTextValue = inputText.value;
+        let heading = document.getElementById('heading').innerText = inputTextValue;        
+        let inputHeading = inputTextValue .heading;
+        let amaount = document.getElementById('total').innerText = inputTextValue;        
+        
+        inputText.value = '';
+      })
+      
+// problem 2..............................
+      document.getElementById('resetBtn').addEventListener('click', function(){
+        location.reload()
+
+      })
+      
+    </script>
+</body>
+</html>
