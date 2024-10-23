@@ -14,6 +14,17 @@
     <button id="calculate-button">calculate sum</button>
     <h2 id="result"></h2>
 
+    <!-- problem-two/////////////////////////////////// -->
+    <button onclick="showAlert()">Click Me! </button>
+
+    <!-- problem-three ////////////////////////////////////-->     
+        <button id="green">on green</button>
+
+     <!-- problem-four ..........................................-->
+     <h1>Counter: <span id="counter">0</span></h1>
+     <button id="incrementButton">Increase Counter</button>
+    
+
     <script>
         let calculateButton = document.getElementById('calculate-button');
         let inputNum1 = document.getElementById('num1');
@@ -26,8 +37,25 @@
             let sum = num1 + num2;
 
             resultDisplay.textContent = `sum: ${sum}`;
+        });      
+        // problem-two........................//////////
+        function showAlert() {
+       alert('button is clicked')         
+    }
 
-        });
+     //    problem-three///////////////////////////
+      let colorGreen = document.getElementById('green');
+      document.getElementById('green').addEventListener('click', function(){
+        document.body.style.backgroundColor = 'green';
+      })
+
+    //   problem-four .............................................//
+    let count = 0;
+
+document.getElementById('incrementButton').addEventListener('click', function() {
+    count++;
+    document.getElementById('counter').innerText = count;
+});
     </script>
 </body>
 </html>
